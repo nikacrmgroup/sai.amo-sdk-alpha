@@ -1,0 +1,22 @@
+<table id="transactions" class="display {# compact #}" style="width:100%">
+    <thead>
+    <tr>
+        {% for header in headers %}
+            <th>{{ header }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for transaction in transactions %}
+        <tr>
+            {% for row in transaction %}
+
+                <td>
+                    <div class="cell-container">{{ row }}</div>
+                </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </tbody>
+
+</table>

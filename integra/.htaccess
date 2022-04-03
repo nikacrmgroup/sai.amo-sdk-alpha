@@ -1,0 +1,10 @@
+### Если такой хостинг как ukraine.com.ua с недосервером Options +SymLinksIfOwnerMatch -MultiViews -Indexes
+Options +FollowSymLinks -MultiViews -Indexes
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+RewriteCond %{REQUEST_FILENAME} !-f
+##RewriteCond %{REQUEST_FILENAME} !-d
+###если скриптв папке, то добавить перед index.php папку
+RewriteRule ^.*$ /integra/index.php [L,QSA]
